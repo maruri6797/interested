@@ -6,20 +6,36 @@
   <title>tetris</title>
 </head>
 <body>
-  <canvas id="canvas"></canvas>
-  <div class="info">
-    <p>スコア</p>
-    <div id="score">0</div>
+  <div class="containar">
+    <div class="row">
+      <div class="col-8">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="col-4">
+        <p>スコア</p>
+        <div id="score">0</div>
+      </div>
+    </div>
   </div>
   <script>
   //落ちるスピード
-    const GAME_SPEED = 500;
+    const GAME_SPEED = 800;
   //フィールドサイズ
     const FIELD_COL = 10;
     const FIELD_ROW = 20;
+    const FIELD_WALL = 1;
+    const FIELD_FLOOR = 1;
+    const FIELD_SPACE = 2;
+    let fiel = [FIELD_ROW + FIELD_SPACE + FIELD_FLOOR, FIELD_COL + FIELD_WALL * 2];
 
+    for(let i = 0; i < fiel[0].length; i++){
+      fiel[i, 0] = 8;
+      fiel[i, fiel[1].length - 1] = 8;
+    }for(let i = 0; i < fiel[1].length; i++){
+      fiel[fiel(0).length - 1, i] = 8;
+    }
   //ブロック一つのサイズ
-    const BLOCK_SIZE = 30;
+    const BLOCK_SIZE = 20;
   //スクリーンサイズ
     const SCREEN_W = BLOCK_SIZE * FIELD_COL;
     const SCREEN_H = BLOCK_SIZE * FIELD_ROW;
@@ -31,7 +47,7 @@
 
     canvas.width = SCREEN_W;
     canvas.height = SCREEN_H;
-    canvas.style.border = "4px solid #555";
+    canvas.style.border = "4px solid #fff";
 
   //テトロミノ本体
   const TETRO_COLORS = [
@@ -42,7 +58,7 @@
     "#F0F",
     "#FF0",
     "#F00",
-    "#008000"
+    "#008000",
   ];
 
   const TETRO_TYPES = [
