@@ -2,22 +2,28 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>ぷよぷよ</title>
   <script src="src/config.js"></script>
   <script src="src/game.js"></script>
-  <script src="src/image.js"></script>
+  <script src="src/puyoimage.js"></script>
   <script src="src/score.js"></script>
-  <script src="stage.js"></script>
+  <script src="src/stage.js"></script>
+  <script src="src/player.js"></script>
 </head>
 <body style="margin: 0;">
+  <!-- <div id="stage" style="position:absolute; left: 0; top: 0; overflow: hidden;"></div> -->
   <div id="stage" style="position: relative; margin: 0 auto; overflow: hidden; background: #000;"></div>
+  <!-- <div id="score" style="position:absolute; left: 0; top: 0; overflow: hidden; text-align: right;"></div> -->
+  <div id="score" style="margin: 0 auto; overflow: hidden; text-align: right;"></div>
   <div style="display: none;">
     <img src="img/puyo_1.png" id="puyo_1">
     <img src="img/puyo_2.png" id="puyo_2">
     <img src="img/puyo_3.png" id="puyo_3">
     <img src="img/puyo_4.png" id="puyo_4">
     <img src="img/puyo_5.png" id="puyo_5">
+    <img src="img/batankyu.png" id="batankyu">
+    <img src="img/zenkeshi.png" id="zenkeshi">
     <img src="img/0.png" id="font0">
     <img src="img/1.png" id="font1">
     <img src="img/2.png" id="font2">
@@ -28,8 +34,6 @@
     <img src="img/7.png" id="font7">
     <img src="img/8.png" id="font8">
     <img src="img/9.png" id="font9">
-    <img src="img/batankyu.png" id="batankyu">
-    <img src="img/zenkeshi.png" id="zenkeshi">
   </div>
 </body>
 </html>
