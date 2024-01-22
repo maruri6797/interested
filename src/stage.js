@@ -31,7 +31,6 @@ class Stage {
     this.scoreElement = scoreElement;
 
     const nextElement = document.getElementById("next");
-    nextElement.style.position = 'absolute';
     nextElement.style.width = Config.puyoImgHeight * 2 + 'px';
     nextElement.style.height = Config.puyoImgHeight * 3 + 'px';
     this.nextElement = nextElement;

@@ -66,6 +66,24 @@ class Player {
       }
     });
   }
+
+  static nextPuyo() {
+    // 新しいぷよの色を決める
+    const puyoColors = Math.max(1, Math.min(5, Config.puyoColors));
+    this.centerPuyo = Math.floor(Math.random() * puyoColors) + 1;
+    this.movablePuyo = Math.floor(Math.random() * puyoColors) + 1;
+    this.nextCenterPuyo = Math.floor(Math.random() * puyoColors) + 1;
+    this.nextMovablePuyo = Math.floor(Math.random() * puyoColors) + 1;
+    // 新しいぷよ画像を作成する
+    this.centerPuyoElement = PuyoImage.getPuyo(this.centerPuyo);
+    this.movablePuyoElement = PuyoImage.getPuyo(this.movablePuyo);
+    this.nextCenterPuyoElement = PuyoImage.getPuyo(this.nextCenterPuyo);
+    this.nextMovablePuyoElement = PuyoImage.getPuyo(this.nextMovablePuyo);
+    Stage.nextElement.appendChild(this.centerPuyoElement);
+    Stage.nextElement.appendChild(this.movablePuyoElement);
+    Stage.nextElement.appendChild(this.nextCenterPuyoElement);
+    Stage.nextElement.appendChild(this.nextMovablePuyoElement);
+  }
   //ぷよ設置確認
   static createNewPuyo () {
     // ぷよぷよが置けるかどうか、1番上の段の左から3つ目を確認する
@@ -73,13 +91,8 @@ class Player {
         // 空白でない場合は新しいぷよを置けない
         return false;
     }
-    // 新しいぷよの色を決める
-    const puyoColors = Math.max(1, Math.min(5, Config.puyoColors));
-    this.centerPuyo = Math.floor(Math.random() * puyoColors) + 1;
-    this.movablePuyo = Math.floor(Math.random() * puyoColors) + 1;
-    // 新しいぷよ画像を作成する
-    this.centerPuyoElement = PuyoImage.getPuyo(this.centerPuyo);
-    this.movablePuyoElement = PuyoImage.getPuyo(this.movablePuyo);
+
+    this.nextPuyo();
     Stage.stageElement.appendChild(this.centerPuyoElement);
     Stage.stageElement.appendChild(this.movablePuyoElement);
     // ぷよの初期配置を定める
@@ -174,7 +187,7 @@ class Player {
     }
     this.setPuyoPosition();
     if(this.keyStatus.right || this.keyStatus.left) {
-      // 左右のの確認をする
+      // 左右の確認をする
       const cx = (this.keyStatus.right) ? 1 : -1;
       const x = this.puyoStatus.x;
       const y = this.puyoStatus.y;
