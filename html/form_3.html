@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>form test</h1>
+    <form action="form_1_next.html" method="GET">
+      text入力 <input type="text" name="hoge"><br>
+      password入力 <input type="password" name="pw"><br>
+      radio グループ1 <label><input type="radio" name="radio_a" value="1">選択肢1</label>
+      <label><input type="radio" name="radio_a" value="2">選択肢2</label>
+      <label><input type="radio" name="radio_a" value="3">選択肢3</label>
+      <br>
+      radio グループ2 <label><input type="radio" name="radio_b" value="11">選択肢11</label>
+      <label for=""><input type="radio" name="radio_b" value="22">選択肢22</label>
+      <label for=""><input type="radio" name="radio_b" value="33">選択肢33</label>
+      <br>
+      checkbox <label for=""><input type="checkbox" name="check" value="c1">選択肢1</label>
+      <label for=""><input type="checkbox" name="check" value="c2">選択肢2</label>
+      <label for=""><input type="checkbox" name="check" value="c3">選択肢3</label>
+      <br>
+      select <select name="sele" id="">
+        <option value="">選択肢1</option>
+        <option value="">選択肢2</option>
+        <option value="">選択肢3</option>
+      </select><br>
+      select multi <select name="sele_multiple" size="3" multiple>
+        <option value="">選択肢11</option>
+        <option value="">選択肢22</option>
+        <option value="">選択肢33</option>
+      </select><br>
+      改行付きtext入力 <textarea name="tarea" id="" cols="50" rows="5">初期値</textarea><br>
+      ファイル送信 <input type="file" name="f" id=""><br>
+      隠れた入力 <input type="hidden" name="hide" value="hidden string"><br>
+      <input type="button" value="送信するボタン"><br>
+      <input type="reset" value="リセットするボタン" id=""><br>
+      <button>送信する</button>
+    </form>
+  </body>
+</html>

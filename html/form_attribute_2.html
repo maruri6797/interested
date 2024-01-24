@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>form test</h1>
+    <form action="form_1_next.html" method="GET">
+      ユーザーID <input placeholder="IDを入力してください"/><br />
+      必須入力 <input required/><br />
+      入力候補付き<input list="keyword_list"/><br />
+      <datalist id="keyword_list">
+        <option value="入力候補"></option>
+        <option value="DMM"></option>
+        <option value="WEBCAMP"></option>
+        <option value="HTML"></option>
+        <option value="form"></option>
+      </datalist>
+      <button type="submit">送信する</button>
+    </form>
+  </body>
+</html>

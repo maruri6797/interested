@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>form test</h1>
+    <form action="form_1_next.html" method="GET">
+      通常のinput <input name="t1"/><br />
+      size付きのinput <input name="t2" size="3"/><br />
+      maxlength付きのinput <input maxlength="3" name="t3"/><br />
+
+      通常のinput <input value="default-1" name="tt1"/><br />
+      readonlyのinput <input type="text" name="tt2" value="default-1" readonly/><br />
+      disabledのinput <input type="text" name="tt3" value="default-1" disabled/><br />
+
+      radio <label for=""><input type="radio" name="radio_a" value="1"/>選択肢1</label>
+      <label for=""><input type="radio" name="radio_a" value="2"/>選択肢2</label>
+      <label for=""><input type="radio" name="radio_a" value="3"/>選択肢3</label>
+      <br />
+      radio checked <label for=""><input type="radio" name="radio_b" value="11"/>選択肢11</label>
+      <label for=""><input type="radio" name="radio_b" value="22"/>選択肢22</label>
+      <label for=""><input type="radio" name="radio_b" value="33" checked/>選択肢33</label>
+      <br />
+      checkbox <label for=""><input type="checkbox" name="check" value="c1" checked/>選択肢1</label>
+      <label for=""><input type="checkbox" name="check" value="c2"/>選択肢2</label>
+      <label for=""><input type="checkbox" name="check" value="c3" checked/>選択肢3</label>
+      <br />
+      select <select name="sele" id="sele">
+        <option>
+        <option value="1">選択肢1</option>
+        <option value="2">選択肢2</option>
+        <option value="3">選択肢3</option>
+      </select><br />
+      select selected <select name="sele_2" id="sele_2">
+        <option>
+        <option value="1">選択肢1</option>
+        <option value="2">選択肢2</option>
+        <option value="3" selected>選択肢3</option>
+      </select><br />
+      select multi <select name="sele_multiple" size="3" multiple>
+        <option value="11" selected>選択肢11</option>
+        <option value="22">選択肢22</option>
+        <option value="33" selected>選択肢33</option>
+      </select><br />
+
+      <button>送信する</button>
+    </form>
+  </body>
+</html>

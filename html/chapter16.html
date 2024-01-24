@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>お問い合わせ</h1>
+    <form action="form/send" method="POST">
+      お名前 <input type="text" name="name"><br>
+      誕生日 <input type="date" name="birthday"><br>
+      emailアドレス <input type="email" name="email"><br>
+      性別 <label for=""><input type="radio" name="radio" value="nothing">無回答</label>
+      <label for=""><input type="radio" name="radio" value="male">男性</label>
+      <label for=""><input type="radio" name="radio" value="female">女性</label>
+      <br>
+      趣味 <label for=""><input type="checkbox" name="hobby" value="suport">スポーツ</label>
+      <label for=""><input type="checkbox" name="hobby" value="book">読書</label>
+      <label for=""><input type="checkbox" name="hobby" value="game">ゲーム</label>
+      <label for=""><input type="checkbox" name="hobby" value="cook">料理</label>
+      <label for=""><input type="checkbox" name="hobby" value="eat">食</label>
+      <label for=""><input type="checkbox" name="hobby" value="travel">旅行</label>
+      <br>
+      <button>送信する</button>
+    </form>
+  </body>
+</html>

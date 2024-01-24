@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>form test</h1>
+    <form action="form_1_next.html" method="GET">
+      <button type="submit" autofocus disabled>送信する</button>
+      <br /><br />
+      <button type="button" id="button_test" disabled>送信する（button）</button>
+    </form>
+  </body>
+  <script>
+    window.addEventListener('load', function(){
+      document.getElementById("button_test").onclick = function() {
+        alert('Hello');
+      };
+    });
+  </script>
+</html>
